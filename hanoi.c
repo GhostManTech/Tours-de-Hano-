@@ -1,7 +1,7 @@
 #include <stdio.h>
-#define N 4
+#define N 5
 
-int tab_disks[N] = {1};
+int tab_disks[N] = {1,1,1,1,1};
 
 void display_table(){
 	for(int k = 0; k < N; k++){
@@ -73,7 +73,7 @@ void disp_disks(){
 			cnt3--;
 		}
 	}
-	
+
 	//affichage
 	for(int i = 0; i < N; i++){
 		printf("\t%s\t%s\t%s\n", tige_1[i], tige_2[i], tige_3[i]);
