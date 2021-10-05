@@ -73,6 +73,7 @@ void disp_disks(){
 			cnt3--;
 		}
 	}
+	
 	//affichage
 	for(int i = 0; i < N; i++){
 		printf("\t%s\t%s\t%s\n", tige_1[i], tige_2[i], tige_3[i]);
@@ -86,15 +87,11 @@ void move(int n, int t_start, int t_end){
 }
 
 int hanoi(int n, int t_left, int t_middle, int t_right){
-	if(n == 1){
+	if(n == 1)
 		move(1, t_left, t_right);
-		//disp_disks();
-	}
 	else{
-
 		hanoi(n-1, t_left, t_right, t_middle);
 		move(n, t_left, t_right);
-		//disp_disks();
 		hanoi(n-1, t_middle, t_left, t_right);
 	}
 }
